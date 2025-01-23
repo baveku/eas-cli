@@ -100,8 +100,8 @@ export default class BuildVersionSetView extends EasCommand {
       toAppPlatform(platform),
       applicationIdentifier
     );
-    let version = flags.value;
-    if (!flags.value && flags['non-interactive']) {
+    let version = flags.version;
+    if (!flags.version && flags['non-interactive']) {
       throw new Error('"--version" flag is required in non-interactive mode.');
     } else {
       const currentStateMessage = remoteVersions?.buildVersion
